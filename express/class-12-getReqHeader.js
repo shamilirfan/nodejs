@@ -4,7 +4,7 @@ var app = express();
 var port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Home Page");
+  res.send("Name: " + req.header("name") + ` Age: ${req.header("age")}`);
 });
 
 app.listen(port, () =>

@@ -4,6 +4,8 @@ var app = express();
 var port = 3000;
 
 app.get("/", (req, res) => {
+  res.append("name", "Alice");
+  res.append("age", 30);
   res.send("Home Page");
 });
 

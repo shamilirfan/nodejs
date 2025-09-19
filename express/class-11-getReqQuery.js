@@ -4,7 +4,10 @@ var app = express();
 var port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Home Page");
+  var name = req.query.name;
+  var age = req.query.age;
+
+  res.send("Name: " + name + ` Age: ${age}`);
 });
 
 app.listen(port, () =>
